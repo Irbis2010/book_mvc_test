@@ -4,17 +4,18 @@
 <html>
 <body>
 
-<h2>All Books</h2>
+<h2>Все книги на полке</h2>
 <br>
 
 <table>
     <tr>
-        <th>Title</th>
-        <th>Description</th>
-        <th>Author</th>
-        <th>Isbn</th>
-        <th>Publication</th>
-        <th>Location</th>
+        <th width="200">Название книги</th>
+        <th width="300">Описание</th>
+        <th width="220">Автор</th>
+        <th width="200">ISBN</th>
+        <th width="100">Год издания</th>
+        <th width="100">Место нахождения книги</th>
+
     </tr>
 
     <c:forEach var="book" items="${allBook}">
@@ -33,9 +34,9 @@
             <td>${book.title}</td>
             <td>${book.description}</td>
             <td>${book.author}</td>
-            <td>${book.isbn}</td>
-            <td>${book.publication}</td>
-            <td>${book.location}</td>
+            <td align="center">${book.isbn}</td>
+            <td align="center">${book.publication}</td>
+            <td align="center">${book.location}</td>
             <td>
                 <input type="button" value="Update"
                        onclick="window.location.href='${updateButton}'"/>
@@ -44,13 +45,16 @@
                        onclick="window.location.href='${deleteButton}'"/>
             </td>
 
+
         </tr>
+
     </c:forEach>
+
 
 </table>
 <br>
 
-<input type="button" value="Add"
+<input type="button" value="Добавить книгу"
 onclick="window.location.href = 'addNewBook'"/>
 
 

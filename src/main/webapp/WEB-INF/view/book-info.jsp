@@ -4,7 +4,7 @@
 <html>
 
 <body>
-<h2>Book Info</h2>
+<h2>Информация о книге</h2>
 <br>
 
 <form:form action="saveBook" modelAttribute="book">
@@ -24,8 +24,8 @@
 <%--    Location <form:input path="location"/>--%>
 <%--    <br><br>--%>
     Location <form:select path="location">
-    <form:option value="Где сейчас находится книга" label="На руках"/>
-    <form:option value="Где сейчас находится книга" label="На полке"/>
+    <form:option value="На руках" label="На руках"/>
+    <form:option value="На полке" label="На полке"/>
 </form:select>
     <br>
     <br>
